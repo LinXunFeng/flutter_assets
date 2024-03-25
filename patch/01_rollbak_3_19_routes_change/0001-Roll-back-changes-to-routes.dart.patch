@@ -1,0 +1,45 @@
+From 5252f276131018cd2e51d775d2f5239a408bc101 Mon Sep 17 00:00:00 2001
+From: LinXunFeng <linxunfeng@yeah.net>
+Date: Mon, 25 Mar 2024 15:19:41 +0800
+Subject: [PATCH] Roll back changes to routes.dart
+
+---
+ packages/flutter/lib/src/widgets/routes.dart | 22 ++++++++++----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/packages/flutter/lib/src/widgets/routes.dart b/packages/flutter/lib/src/widgets/routes.dart
+index 8f00436dcf..b27bbea6a9 100644
+--- a/packages/flutter/lib/src/widgets/routes.dart
++++ b/packages/flutter/lib/src/widgets/routes.dart
+@@ -1708,17 +1708,17 @@ abstract class ModalRoute<T> extends TransitionRoute<T> with LocalHistoryRoute<T
+     changedInternalState();
+   }
+ 
+-  @override
+-  void didChangeNext(Route<dynamic>? nextRoute) {
+-    super.didChangeNext(nextRoute);
+-    changedInternalState();
+-  }
+-
+-  @override
+-  void didPopNext(Route<dynamic> nextRoute) {
+-    super.didPopNext(nextRoute);
+-    changedInternalState();
+-  }
++  // @override
++  // void didChangeNext(Route<dynamic>? nextRoute) {
++  //   super.didChangeNext(nextRoute);
++  //   changedInternalState();
++  // }
++
++  // @override
++  // void didPopNext(Route<dynamic> nextRoute) {
++  //   super.didPopNext(nextRoute);
++  //   changedInternalState();
++  // }
+ 
+   @override
+   void changedInternalState() {
+-- 
+2.39.3 (Apple Git-145)
+
