@@ -1,0 +1,14 @@
+diff --git a/packages/flutter/lib/src/rendering/sliver.dart b/packages/flutter/lib/src/rendering/sliver.dart
+index 32b72607f5..c54626c1c8 100644
+--- a/packages/flutter/lib/src/rendering/sliver.dart
++++ b/packages/flutter/lib/src/rendering/sliver.dart
+@@ -468,7 +468,9 @@ class SliverConstraints extends Constraints {
+     assert(other.debugAssertIsValid());
+     return other.axisDirection == axisDirection
+         && other.growthDirection == growthDirection
++        && other.userScrollDirection == userScrollDirection
+         && other.scrollOffset == scrollOffset
++        && other.precedingScrollExtent == precedingScrollExtent
+         && other.overlap == overlap
+         && other.remainingPaintExtent == remainingPaintExtent
+         && other.crossAxisExtent == crossAxisExtent
